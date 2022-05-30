@@ -1,6 +1,3 @@
-import mlflow
-import argparse
-
 def main(training=True):
     with mlflow.start_run() as run:
         if training:

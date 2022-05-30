@@ -1,7 +1,15 @@
 import mlflow
 
-text = "input 01"
+text="input 01"
+
+with open("artifacts.txt","w") as f:
+    f.write(text)
+mlflow.log_artifact("artifacts01.txt", artifact_path="features")    
+
+
+
+'''text = "input 01"
 
 with open("artifacts01.txt", "w") as f:
     f.write(text)
-mlflow.log_artifact("artifacts01.txt", artifact_path="features")
+mlflow.log_artifact("artifacts01.txt", artifact_path="features")'''
